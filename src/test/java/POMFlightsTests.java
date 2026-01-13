@@ -15,7 +15,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-@Execution(ExecutionMode.CONCURRENT)
+//@Execution(ExecutionMode.CONCURRENT)
 @TestMethodOrder(MethodOrderer.DisplayName.class)
 public class POMFlightsTests {
     @BeforeAll
