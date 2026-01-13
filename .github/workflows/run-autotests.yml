@@ -25,11 +25,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            xvfb \
-            libnss3 \
-            libxss1 \
-            libasound2
+          sudo apt-get install -y xvfb
 
       # Шаг 3: Установка Google Chrome
       - name: Install Google Chrome
