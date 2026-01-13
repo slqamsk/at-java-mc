@@ -50,7 +50,7 @@ public class FlightsListPage {
             String timeText = currentFlight.$x("./td[5]").text().trim();
             //System.out.println(timeText);
             LocalTime current = LocalTime.parse(timeText, formatter);
-
+            System.out.println(current.toString());
             if (prev != null) {
                 Assertions.assertTrue(prev.isBefore(current));
             }
