@@ -47,6 +47,7 @@ public class FlightsListPage {
         LocalTime prev = null;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         System.out.println("Размер массива" + allFlights.size());
+        Allure.addAttachment("Размер массива" + allFlights.size(), " ");
         for (SelenideElement currentFlight : allFlights) {
             String timeText = currentFlight.$x("./td[5]").text().trim();
             //System.out.println(timeText);
