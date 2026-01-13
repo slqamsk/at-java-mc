@@ -161,6 +161,11 @@ jobs:
     if: always()
 
     steps:
+      - name: Report URL
+        run: |
+          REPORT_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          echo "🔗 Allure Report URL: $REPORT_URL"
+
       - name: Report Success
         if: needs.test.result == 'success'
         run: |
