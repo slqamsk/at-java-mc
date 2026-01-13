@@ -174,6 +174,7 @@ public class POMFlightsTests {
 
         // Страница со списком найденных рейсов
         FlightsListPage flightsList = new FlightsListPage();
+        System.out.println("Выводим список на консоль");
         flightsList.isTimeSorted();
         flightsList.sortByPrice();
         flightsList.isTimeSorted();
