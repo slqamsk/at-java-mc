@@ -69,6 +69,8 @@ jobs:
           ./gradlew clean test \
             -Dselenide.browser=chrome \
             -Dselenide.headless=true \
+            --info \
+            --stacktrace
 
       # Шаг 8: Генерация Allure отчета
       - name: Generate Allure Report

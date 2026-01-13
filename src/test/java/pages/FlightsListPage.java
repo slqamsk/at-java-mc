@@ -5,6 +5,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 
@@ -51,6 +52,7 @@ public class FlightsListPage {
             //System.out.println(timeText);
             LocalTime current = LocalTime.parse(timeText, formatter);
             System.out.println(current.toString());
+            Allure.addAttachment("Лог", current.toString());
             if (prev != null) {
                 Assertions.assertTrue(prev.isBefore(current));
             }

@@ -4,6 +4,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Allure;
 import pages.FlightsListPage;
 import pages.LoginPage;
 import pages.RegistrationPage;
@@ -175,6 +176,8 @@ public class POMFlightsTests {
         // Страница со списком найденных рейсов
         FlightsListPage flightsList = new FlightsListPage();
         System.out.println("Выводим список на консоль");
+        Allure.addAttachment("Выводим список на консоль",
+                "Тут должно быть много шагов, а не один");
         flightsList.isTimeSorted();
         flightsList.sortByPrice();
         flightsList.isTimeSorted();
